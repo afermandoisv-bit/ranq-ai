@@ -350,8 +350,8 @@ footer .logo i{background:#111}footer .logo i:after{border-color:#fff}
   </div>
   <div class="btns">
     <button class="lang" id="lang" aria-label="Language">ES</button>
-    <a class="btn" href="#waitlist" data-i18n="talk">Talk to us</a>
-    <a class="btn w" href="#waitlist" data-i18n="join">Join waitlist</a>
+    <a class="btn" href="#waitlist" data-mail="talk" data-i18n="talk">Talk to us</a>
+    <a class="btn w" href="#waitlist" data-mail="join" data-i18n="join">Join Ranq</a>
   </div>
 </nav>
 </div>
@@ -368,8 +368,8 @@ footer .logo i{background:#111}footer .logo i:after{border-color:#fff}
     </h1>
     <p class="lead fade" style="--d:500ms" data-i18n="lead">Track how ChatGPT, Gemini and other AI engines recommend your brand against competitors, and know exactly what to fix.</p>
     <div class="cta fade" style="--d:650ms">
-      <a class="btn k lg" href="#waitlist" data-i18n="join">Join waitlist</a>
-      <a class="btn o lg" href="#waitlist" data-i18n="talk">Talk to us</a>
+      <a class="btn k lg" href="#waitlist" data-mail="join" data-i18n="join">Join Ranq</a>
+      <a class="btn o lg" href="#waitlist" data-mail="talk" data-i18n="talk">Talk to us</a>
     </div>
 
     <div class="stage fade" style="--d:800ms" id="stage">
@@ -540,7 +540,7 @@ footer .logo i{background:#111}footer .logo i:after{border-color:#fff}
       <span class="eyebrow" data-i18n="a_eye">What customers ask AI</span>
       <h2 style="margin-top:22px"><span class="dim" data-i18n="a_h1">AI is the new</span> <span data-i18n="a_h2">search engine</span></h2>
       <p class="sub" data-i18n="a_sub">When a shopper asks for a recommendation, AI answers with a short list. If you're not on it, you don't exist for that customer. ranq.ai shows you exactly what the list looks like and why.</p>
-      <a class="btn k" href="#waitlist" data-i18n="join">Join waitlist</a>
+      <a class="btn k" href="#waitlist" data-mail="join" data-i18n="join">Join Ranq</a>
     </div>
     <div class="chat fade" id="chat">
       <div class="q" data-i18n="chatq">What are the best brands for casual summer clothing in Chile?</div>
@@ -592,7 +592,7 @@ footer .logo i{background:#111}footer .logo i:after{border-color:#fff}
       <details><summary data-i18n="fq3">Why show percentages instead of one rank?</summary><p data-i18n="fa3">AI answers change from run to run. We repeat each prompt and report how often you appear, with a confidence range, so the trend is reliable.</p></details>
       <details><summary data-i18n="fq4">Are API answers the same as what consumers see?</summary><p data-i18n="fa4">Not exactly. Consumer apps add personalization and different system prompts. Treat the numbers as a consistent benchmark over time rather than exact consumer exposure.</p></details>
       <details><summary data-i18n="fq5">Who is it for?</summary><p data-i18n="fa5">Marketing and e-commerce teams at brands and retailers, where the CMO or marketing lead decides on spend.</p></details>
-      <details><summary data-i18n="fq6">How do I get access?</summary><p data-i18n="fa6">We're onboarding a small group of pilot brands. Join the waitlist and we'll reach out. Early adopters get preferential terms.</p></details>
+      <details><summary data-i18n="fq6">How do I get access?</summary><p data-i18n="fa6">We're onboarding a small group of pilot brands. Click Join Ranq, send the pre-filled email, and we'll reach out. Early adopters get preferential terms.</p></details>
     </div>
   </div>
 </section>
@@ -603,11 +603,8 @@ footer .logo i{background:#111}footer .logo i:after{border-color:#fff}
       <span class="sp dim" data-i18n="c_h1">Find out what AI says</span><br>
       <span class="sp"><span data-i18n="c_h2">about your brand</span> <span class="pillimg tex moss"></span></span>
     </h2>
-    <form class="fade" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓';this.querySelector('input').value='';">
-      <input type="email" required placeholder="you@company.com" data-i18n-ph="ph" aria-label="Work email">
-      <button class="btn k lg" type="submit" data-i18n="join">Join waitlist</button>
-    </form>
-    <p class="fine" data-i18n="fine">Draft preview: the form is not connected yet.</p>
+    <div class="cta fade" style="margin-top:36px"><a class="btn k lg" href="#waitlist" data-mail="join" data-i18n="join">Join Ranq</a></div>
+    <p class="fine" data-i18n="fine">Opens an email with a few quick questions (name, company, role, website, country). Just fill them in and send.</p>
   </div>
 </div>
 
@@ -616,7 +613,7 @@ footer .logo i{background:#111}footer .logo i:after{border-color:#fff}
 
 <script>
 const T={es:{
-nav1:"Producto",nav2:"Plataforma",nav3:"Insights",nav4:"Preguntas",talk:"Hablemos",join:"Unirme a la lista",
+nav1:"Producto",nav2:"Plataforma",nav3:"Insights",nav4:"Preguntas",talk:"Hablemos",join:"Unirme a Ranq",
 pill:"Analítica de búsqueda con IA",h1a:"Un nuevo estándar en",h1b:"visibilidad en IA",
 lead:"Mide cómo ChatGPT, Gemini y otros motores de IA recomiendan tu marca frente a la competencia, y sabe exactamente qué corregir.",
 fl2:"Nueva brecha detectada",fl2b:"3 prompts de alta intención",fl2c:"Competidor A lidera",sov:"Share of voice",yb:"Tu marca",
@@ -651,9 +648,9 @@ fq2:"¿Qué mercados e idiomas cubren?",fa2:"Partimos con Chile en español y va
 fq3:"¿Por qué porcentajes y no un solo ranking?",fa3:"Las respuestas de la IA cambian en cada corrida. Repetimos cada prompt y reportamos cuán seguido apareces, con rango de confianza.",
 fq4:"¿Las respuestas por API son iguales a las del consumidor?",fa4:"No exactamente. Las apps de consumo agregan personalización y otros prompts de sistema. Usa los números como referencia consistente en el tiempo, no como exposición exacta.",
 fq5:"¿Para quién es?",fa5:"Equipos de marketing y e-commerce de marcas y retailers, donde el CMO o líder de marketing decide el gasto.",
-fq6:"¿Cómo accedo?",fa6:"Estamos incorporando un grupo pequeño de marcas piloto. Súmate a la lista y te contactamos. Los primeros usuarios tienen condiciones preferentes.",
+fq6:"¿Cómo accedo?",fa6:"Estamos incorporando un grupo pequeño de marcas piloto. Haz clic en Unirme a Ranq, envía el correo prellenado y te contactamos. Los primeros usuarios tienen condiciones preferentes.",
 st1:"Prompts",st2:"Midiendo",st3:"Resultados",ans:"Respuestas recopiladas",mh:"Estimación de visibilidad",me:"Por motor",pos:"Positivo",
-c_h1:"Descubre qué dice la IA",c_h2:"de tu marca",ph:"tu@empresa.com",fine:"Vista borrador: el formulario aún no está conectado."}};
+c_h1:"Descubre qué dice la IA",c_h2:"de tu marca",fine:"Abre un correo con unas preguntas rápidas (nombre, empresa, cargo, sitio web, país). Solo complétalas y envía."}};
 
 /* word-by-word blur reveal */
 function split(el,text){
@@ -691,14 +688,13 @@ function renderTrack(l){const t=document.getElementById('track');const h=EV[l].m
 renderTrack('en');
 
 /* language */
-const enph=document.querySelector('[data-i18n-ph]').placeholder;let cur='en';
+let cur='en';
 document.getElementById('lang').onclick=function(){
   cur=cur==='en'?'es':'en';document.documentElement.lang=cur;
   document.querySelectorAll('[data-i18n]').forEach(e=>{
     const v=cur==='es'?T.es[e.dataset.i18n]:en[e.dataset.i18n];if(v==null)return;
     if(e.classList.contains('sp')){split(e,v);requestAnimationFrame(()=>e.classList.add('in'));}else e.textContent=v;
   });
-  document.querySelector('[data-i18n-ph]').placeholder=cur==='es'?T.es.ph:enph;
   renderTrack(cur);this.textContent=cur==='en'?'ES':'EN';
 };
 
@@ -724,6 +720,22 @@ addEventListener('scroll',()=>{
   nav.style.transform=(y>lastY&&y>300)?'translateY(-90px)':'none';lastY=y;
 },{passive:true});
 if(!rm)app.style.transform='rotateX(10deg) scale(.94)';
+
+/* "Join Ranq" / "Talk to us": open a pre-filled email */
+(function(){
+  const u=['andresfv','mit.edu'].join('@'); /* assembled in code so simple scrapers don't find it */
+  const L={
+    en:{join:['Join Ranq','Hi Ranq team,\n\nI would like to join Ranq. Here are my details:\n\nName: \nCompany: \nWork email: \nRole / job title (CMO, marketing lead, e-commerce, founder, agency, other): \nCompany website: \nCountry: \n\nWhat I most want to know about my brand in AI answers (optional):\n\n'],
+        talk:['Talk to Ranq','Hi Ranq team,\n\nI would like to talk with you.\n\nName: \nCompany: \nWork email: \n\nMy question:\n\n']},
+    es:{join:['Quiero unirme a Ranq','Hola equipo de Ranq,\n\nQuiero unirme a Ranq. Estos son mis datos:\n\nNombre: \nEmpresa: \nCorreo de trabajo: \nCargo (CMO, líder de marketing, e-commerce, fundador, agencia, otro): \nSitio web de la empresa: \nPaís: \n\nLo que más quiero saber de mi marca en las respuestas de IA (opcional):\n\n'],
+        talk:['Hablar con Ranq','Hola equipo de Ranq,\n\nMe gustaría conversar con ustedes.\n\nNombre: \nEmpresa: \nCorreo de trabajo: \n\nMi consulta:\n\n']}};
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('[data-mail]');if(!a)return;
+    e.preventDefault();
+    const [s,b]=L[cur][a.dataset.mail];
+    location.href='mailto:'+u+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+  });
+})();
 
 /* diagram: circles appear one by one as you scroll (reversible) */
 (function(){
